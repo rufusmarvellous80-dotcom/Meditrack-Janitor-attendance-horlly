@@ -1,0 +1,41 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gradient background per design */
+:root {
+  --bg-gradient-start: #0F2027;
+  --bg-gradient-end: #2C5364;
+  --accent-start: #0072ff;
+  --accent-end: #00c6ff;
+}
+
+html, body, #__next { height: 100%; }
+
+body {
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #0b1220;
+}
+
+/* card */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.12);
+  padding: 1rem;
+}
+
+/* gradient button */
+.btn-gradient {
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn-gradient:hover { filter: brightness(.92); transform: translateY(-1px); transition: .15s; }
+
+/* small utility */
+.container { max-width: 1100px; margin: 2rem auto; padding: 1rem; }
